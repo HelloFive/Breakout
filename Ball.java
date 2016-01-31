@@ -9,7 +9,7 @@ public class Ball {
 
     private Breakout game;
     public static int radius = 10;
-    Point position = new Point(0,50);
+    Point position = new Point(0,100);
     Point movement = new Point(1,1); // < x , y >
     public static int input_speed = 50;
     float speed = 0.3f * input_speed/100 * 2;

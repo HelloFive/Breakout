@@ -158,7 +158,7 @@ public class Breakout extends JPanel {
     public void next() {
         createBricks(BrickLines,10);
         togglePause();
-        ball.position = new Point(0,50);
+        ball.position = new Point(0,100);
         if (ball.movement.y < 0) ball.movement.y *= -1;
     }
 
@@ -185,14 +185,14 @@ public class Breakout extends JPanel {
         bricks = new ArrayList<Brick>();
 
         int gap = 10;
-        float w = (((float)width-10)/columns)-10;
+        float w = (((float)width-100)/columns)-10;
         float h = 30;
         for (int y=0; y<rows; y++) {
             for (int x=0; x<columns; x++) {
                 Brick b = new Brick();
                 b.mainColor = rowColors[y%rowColors.length]; // repeats color according to the given array.
-                b.position.x = (int) (x*(w+gap)+gap)-width/2;
-                b.position.y = (int) (y*(h+gap)+gap)-height/2;
+                b.position.x = (int) (x*(w+gap)+50)-width/2;
+                b.position.y = (int) (y*(h+gap)+50)-height/2;
                 b.height = (int) h;
                 b.width = (int) w;
                 bricks.add(b);
@@ -203,7 +203,7 @@ public class Breakout extends JPanel {
     public void OnBallLost() {
         balls--;
         if (balls <= 0) OnGameOver(false);
-        else ball.position = new Point(0,50);
+        else ball.position = new Point(0,100);
     }
 
     public void OnGameOver (boolean won) {
