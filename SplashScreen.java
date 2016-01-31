@@ -123,7 +123,7 @@ public class SplashScreen extends JWindow {
 
                 if (count%10 == 0) System.out.println(count);
 
-                if (count == 10) {
+                if (count == 100) {
 
                     createFrame();
 
